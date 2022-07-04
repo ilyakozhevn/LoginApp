@@ -17,5 +17,4 @@ class WelcomeViewController: UIViewController {
         super.viewDidLoad()
         welcomeMessageLabel.text = "Welcome, \(userName)!"
     }
-    
 }
