@@ -13,7 +13,7 @@ class LoginViewController: UIViewController {
     @IBOutlet var passwordTF: UITextField!
     
     private let passwords = [
-        "username": "Password"
+        "ilyakozhevn": "lalala"
     ]
     
     //    MARK: keyboard hide
@@ -51,9 +51,9 @@ class LoginViewController: UIViewController {
     @IBAction func forgotPasswordTouched() {
         showAlert(
             title: "I can help you",
-            message: "Enter '\(passwords["username"] ?? "")' for Password",
+            message: "Enter '\(passwords[passwords.keys.first!] ?? "")' for Password",
             handler: {_ in
-                self.passwordTF.text = self.passwords["username"]
+                self.passwordTF.text = self.passwords[self.passwords.keys.first!]
             }
         )
     }
