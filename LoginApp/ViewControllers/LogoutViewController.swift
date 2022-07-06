@@ -7,14 +7,14 @@
 
 import UIKit
 
-class WelcomeViewController: UIViewController {
+class LogoutViewController: UIViewController {
 
-    @IBOutlet var welcomeMessageLabel: UILabel!
+    @IBOutlet var byeMessageLabel: UILabel!
     
     var userName = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        welcomeMessageLabel.text = "Welcome, \(userName)!"
+        byeMessageLabel.text = "Have a nice day, \(userName)!"
     }
 }

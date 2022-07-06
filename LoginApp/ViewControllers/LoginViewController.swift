@@ -18,18 +18,27 @@ class LoginViewController: UIViewController {
     
     //    MARK: keyboard hide
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        super.touchesBegan(touches, with: event) //что если этой строки не будет?
+        super.touchesBegan(touches, with: event)
         view.endEditing(true)
     }
     
     //    MARK: segue
-    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
-        return checkLoginAnsPassword()
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let tabBarVC = segue.destination as? TabBarController else { return }
+        
+        guard let viewControllers = tabBarVC.viewControllers else { return }
+        
+        for viewController in viewControllers {
+            if let logoutViewController = viewController as? LogoutViewController {
+                logoutViewController.userName = self.userNameTF.text ?? ""
+            }
+        }
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let welcomeWC = segue.destination as? WelcomeViewController else { return }
-        welcomeWC.userName = userNameTF.text ?? ""
+    @IBAction func loginTouched() {
+        if checkLoginAnsPassword() {
+            performSegue(withIdentifier: "loginToTabBar", sender: nil)
+        }
     }
     
     @IBAction func unwind(for segue: UIStoryboardSegue) {

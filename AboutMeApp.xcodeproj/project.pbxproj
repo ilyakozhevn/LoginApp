@@ -7,25 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0909CDC928751CE90040714B /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0909CDC828751CE90040714B /* TabBarController.swift */; };
+		0909CDD028752D170040714B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0909CDCF28752D170040714B /* User.swift */; };
 		094AFA38287161EE0093F31A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094AFA37287161EE0093F31A /* AppDelegate.swift */; };
 		094AFA3A287161EE0093F31A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094AFA39287161EE0093F31A /* SceneDelegate.swift */; };
 		094AFA3C287161EE0093F31A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094AFA3B287161EE0093F31A /* LoginViewController.swift */; };
-		094AFA3F287161EE0093F31A /* LoginViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 094AFA3D287161EE0093F31A /* LoginViewController.storyboard */; };
+		094AFA3F287161EE0093F31A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 094AFA3D287161EE0093F31A /* Main.storyboard */; };
 		094AFA41287161F50093F31A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 094AFA40287161F50093F31A /* Assets.xcassets */; };
 		094AFA44287161F50093F31A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 094AFA42287161F50093F31A /* LaunchScreen.storyboard */; };
-		094AFA4E2871938D0093F31A /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094AFA4D2871938D0093F31A /* WelcomeViewController.swift */; };
+		094AFA4E2871938D0093F31A /* LogoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094AFA4D2871938D0093F31A /* LogoutViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		094AFA34287161EE0093F31A /* LoginApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoginApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0909CDC828751CE90040714B /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		0909CDCF28752D170040714B /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		094AFA34287161EE0093F31A /* AboutMeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AboutMeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		094AFA37287161EE0093F31A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		094AFA39287161EE0093F31A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		094AFA3B287161EE0093F31A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		094AFA3E287161EE0093F31A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LoginViewController.storyboard; sourceTree = "<group>"; };
+		094AFA3E287161EE0093F31A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		094AFA40287161F50093F31A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		094AFA43287161F50093F31A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		094AFA45287161F50093F31A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		094AFA4D2871938D0093F31A /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		094AFA4D2871938D0093F31A /* LogoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +43,51 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0909CDCA28752C010040714B /* AppConfig */ = {
+			isa = PBXGroup;
+			children = (
+				094AFA37287161EE0093F31A /* AppDelegate.swift */,
+				094AFA39287161EE0093F31A /* SceneDelegate.swift */,
+				094AFA45287161F50093F31A /* Info.plist */,
+			);
+			path = AppConfig;
+			sourceTree = "<group>";
+		};
+		0909CDCB28752C290040714B /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				094AFA3B287161EE0093F31A /* LoginViewController.swift */,
+				094AFA4D2871938D0093F31A /* LogoutViewController.swift */,
+				0909CDC828751CE90040714B /* TabBarController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		0909CDCC28752C770040714B /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				094AFA3D287161EE0093F31A /* Main.storyboard */,
+				094AFA42287161F50093F31A /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		0909CDCD28752CAD0040714B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				094AFA40287161F50093F31A /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		0909CDCE28752CB90040714B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				0909CDCF28752D170040714B /* User.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		094AFA2B287161EE0093F31A = {
 			isa = PBXGroup;
 			children = (
@@ -50,7 +99,7 @@
 		094AFA35287161EE0093F31A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				094AFA34287161EE0093F31A /* LoginApp.app */,
+				094AFA34287161EE0093F31A /* AboutMeApp.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -58,14 +107,11 @@
 		094AFA36287161EE0093F31A /* LoginApp */ = {
 			isa = PBXGroup;
 			children = (
-				094AFA37287161EE0093F31A /* AppDelegate.swift */,
-				094AFA39287161EE0093F31A /* SceneDelegate.swift */,
-				094AFA3B287161EE0093F31A /* LoginViewController.swift */,
-				094AFA4D2871938D0093F31A /* WelcomeViewController.swift */,
-				094AFA3D287161EE0093F31A /* LoginViewController.storyboard */,
-				094AFA40287161F50093F31A /* Assets.xcassets */,
-				094AFA42287161F50093F31A /* LaunchScreen.storyboard */,
-				094AFA45287161F50093F31A /* Info.plist */,
+				0909CDCB28752C290040714B /* ViewControllers */,
+				0909CDCE28752CB90040714B /* Models */,
+				0909CDCA28752C010040714B /* AppConfig */,
+				0909CDCC28752C770040714B /* Storyboards */,
+				0909CDCD28752CAD0040714B /* Resources */,
 			);
 			path = LoginApp;
 			sourceTree = "<group>";
@@ -73,9 +119,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		094AFA33287161EE0093F31A /* LoginApp */ = {
+		094AFA33287161EE0093F31A /* AboutMeApp */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 094AFA48287161F50093F31A /* Build configuration list for PBXNativeTarget "LoginApp" */;
+			buildConfigurationList = 094AFA48287161F50093F31A /* Build configuration list for PBXNativeTarget "AboutMeApp" */;
 			buildPhases = (
 				094AFA30287161EE0093F31A /* Sources */,
 				094AFA31287161EE0093F31A /* Frameworks */,
@@ -85,9 +131,9 @@
 			);
 			dependencies = (
 			);
-			name = LoginApp;
+			name = AboutMeApp;
 			productName = LoginApp;
-			productReference = 094AFA34287161EE0093F31A /* LoginApp.app */;
+			productReference = 094AFA34287161EE0093F31A /* AboutMeApp.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -105,7 +151,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 094AFA2F287161EE0093F31A /* Build configuration list for PBXProject "LoginApp" */;
+			buildConfigurationList = 094AFA2F287161EE0093F31A /* Build configuration list for PBXProject "AboutMeApp" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -118,7 +164,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				094AFA33287161EE0093F31A /* LoginApp */,
+				094AFA33287161EE0093F31A /* AboutMeApp */,
 			);
 		};
 /* End PBXProject section */
@@ -130,7 +176,7 @@
 			files = (
 				094AFA44287161F50093F31A /* LaunchScreen.storyboard in Resources */,
 				094AFA41287161F50093F31A /* Assets.xcassets in Resources */,
-				094AFA3F287161EE0093F31A /* LoginViewController.storyboard in Resources */,
+				094AFA3F287161EE0093F31A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -142,8 +188,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				094AFA3C287161EE0093F31A /* LoginViewController.swift in Sources */,
-				094AFA4E2871938D0093F31A /* WelcomeViewController.swift in Sources */,
+				094AFA4E2871938D0093F31A /* LogoutViewController.swift in Sources */,
+				0909CDD028752D170040714B /* User.swift in Sources */,
 				094AFA38287161EE0093F31A /* AppDelegate.swift in Sources */,
+				0909CDC928751CE90040714B /* TabBarController.swift in Sources */,
 				094AFA3A287161EE0093F31A /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -151,12 +199,12 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		094AFA3D287161EE0093F31A /* LoginViewController.storyboard */ = {
+		094AFA3D287161EE0093F31A /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				094AFA3E287161EE0093F31A /* Base */,
 			);
-			name = LoginViewController.storyboard;
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 		094AFA42287161F50093F31A /* LaunchScreen.storyboard */ = {
@@ -293,10 +341,10 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 27TK5C5WMS;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = LoginApp/Info.plist;
+				INFOPLIST_FILE = LoginApp/AppConfig/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = LoginViewController;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -321,10 +369,10 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 27TK5C5WMS;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = LoginApp/Info.plist;
+				INFOPLIST_FILE = LoginApp/AppConfig/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = LoginViewController;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -343,7 +391,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		094AFA2F287161EE0093F31A /* Build configuration list for PBXProject "LoginApp" */ = {
+		094AFA2F287161EE0093F31A /* Build configuration list for PBXProject "AboutMeApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				094AFA46287161F50093F31A /* Debug */,
@@ -352,7 +400,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		094AFA48287161F50093F31A /* Build configuration list for PBXNativeTarget "LoginApp" */ = {
+		094AFA48287161F50093F31A /* Build configuration list for PBXNativeTarget "AboutMeApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				094AFA49287161F50093F31A /* Debug */,
