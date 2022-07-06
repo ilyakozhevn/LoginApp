@@ -91,7 +91,7 @@
 		094AFA2B287161EE0093F31A = {
 			isa = PBXGroup;
 			children = (
-				094AFA36287161EE0093F31A /* LoginApp */,
+				094AFA36287161EE0093F31A /* AboutMeApp */,
 				094AFA35287161EE0093F31A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -104,16 +104,16 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		094AFA36287161EE0093F31A /* LoginApp */ = {
+		094AFA36287161EE0093F31A /* AboutMeApp */ = {
 			isa = PBXGroup;
 			children = (
 				0909CDCB28752C290040714B /* ViewControllers */,
 				0909CDCE28752CB90040714B /* Models */,
-				0909CDCA28752C010040714B /* AppConfig */,
 				0909CDCC28752C770040714B /* Storyboards */,
+				0909CDCA28752C010040714B /* AppConfig */,
 				0909CDCD28752CAD0040714B /* Resources */,
 			);
-			path = LoginApp;
+			path = AboutMeApp;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -341,7 +341,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 27TK5C5WMS;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = LoginApp/AppConfig/Info.plist;
+				INFOPLIST_FILE = AboutMeApp/AppConfig/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -369,7 +369,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 27TK5C5WMS;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = LoginApp/AppConfig/Info.plist;
+				INFOPLIST_FILE = AboutMeApp/AppConfig/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
