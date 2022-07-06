@@ -95,7 +95,3 @@ enum AlbumType {
     case Single
     case EP
 }
-
-
-//    guard let url = URL(string: "https://stackoverflow.com") else { return }
-//    UIApplication.shared.open(url)
