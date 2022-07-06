@@ -8,5 +8,4 @@
 import UIKit
 
 class TabBarController: UITabBarController {
-//просто для передачи данных назван класс
 }

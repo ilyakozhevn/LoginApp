@@ -10,8 +10,8 @@ import UIKit
 class ReleasesViewController: UIViewController {
 
     @IBOutlet var albumButtons: [UIButton]!
-
-    var releaseTitles = [""]
+    
+    var releases = [Release(albumName: "", link: "", albumType: .Single, tracks: [""], image: UIImage.init(systemName: "stop")!)]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,23 +20,36 @@ class ReleasesViewController: UIViewController {
         hideExtraButtons()
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let releaseVC = segue.destination as? ReleaseViewController else { return }
+        guard let button = sender as? UIButton else { return }
+
+        let index = Int(button.accessibilityLabel ?? "0") ?? 0
+        let release = releases[index]
+        
+        releaseVC.link = release.link
+        releaseVC.title = release.albumName
+        releaseVC.tracklist = release.tracks
+        releaseVC.artwork = release.image
+    }
+    
+    @IBAction func releaseButtonTouched(_ sender: UIButton) {
+        performSegue(withIdentifier: "showRelease", sender: sender)
+    }
+    
     private func setTitlesForButtons() {
-        for (index, title) in releaseTitles.enumerated() {
+        for (index, release) in releases.enumerated() {
             if index < albumButtons.count {
-                albumButtons[index].setTitle(title, for: .normal)
+                albumButtons[index].setTitle(release.albumName, for: .normal)
             }
         }
     }
     
     private func hideExtraButtons() {
-        if albumButtons.count > releaseTitles.count {
-            for albumIndex in releaseTitles.count..<albumButtons.count {
+        if albumButtons.count > releases.count {
+            for albumIndex in releases.count..<albumButtons.count {
                 albumButtons[albumIndex].isHidden = true
             }
         }
     }
-    
-//    guard let url = URL(string: "https://stackoverflow.com") else { return }
-//    UIApplication.shared.open(url)
-
 }

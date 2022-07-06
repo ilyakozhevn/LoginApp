@@ -29,13 +29,21 @@ class LoginViewController: UIViewController {
         for viewController in viewControllers {
             if let logoutViewController = viewController as? LogoutViewController {
                 logoutViewController.userName = user.info.name
+                
             } else if let introViewController = viewController as? IntroViewController {
-                introViewController.introText = user.info.name + " is an " + user.info.about + "\n\nReferences: " + user.info.references.joined(separator: ", ")
+                introViewController.introText = user.info.name +
+                                                " is an " +
+                                                user.info.about +
+                                                "\n\nReferences: " +
+                                                user.info.references.joined(separator: ", ")
+                
+                introViewController.avatar = user.info.avatar
+                
             } else if let releasesNaviC = viewController as? ReleasesNavigationController {
                 guard let releasesViewC = releasesNaviC.topViewController as? ReleasesViewController else { return }
-                releasesViewC.releaseTitles = []
+                releasesViewC.releases = []
                 for release in user.releases {
-                    releasesViewC.releaseTitles.append(release.albumName)
+                    releasesViewC.releases.append(release)
                 }
             }
         }

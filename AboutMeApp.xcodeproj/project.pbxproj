@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0909CDC928751CE90040714B /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0909CDC828751CE90040714B /* TabBarController.swift */; };
 		0909CDD028752D170040714B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0909CDCF28752D170040714B /* User.swift */; };
+		0935C37E2876360C00556715 /* ReleaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0935C37D2876360C00556715 /* ReleaseViewController.swift */; };
 		09375EBA2875F523003BAF28 /* ReleasesNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09375EB92875F523003BAF28 /* ReleasesNavigationController.swift */; };
 		09375EBC2875F5FA003BAF28 /* ReleasesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09375EBB2875F5FA003BAF28 /* ReleasesViewController.swift */; };
 		094AFA38287161EE0093F31A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094AFA37287161EE0093F31A /* AppDelegate.swift */; };
@@ -24,6 +25,7 @@
 /* Begin PBXFileReference section */
 		0909CDC828751CE90040714B /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		0909CDCF28752D170040714B /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		0935C37D2876360C00556715 /* ReleaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReleaseViewController.swift; sourceTree = "<group>"; };
 		09375EB92875F523003BAF28 /* ReleasesNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReleasesNavigationController.swift; sourceTree = "<group>"; };
 		09375EBB2875F5FA003BAF28 /* ReleasesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReleasesViewController.swift; sourceTree = "<group>"; };
 		094AFA34287161EE0093F31A /* AboutMeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AboutMeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -68,6 +70,7 @@
 				0909CDC828751CE90040714B /* TabBarController.swift */,
 				09375EB92875F523003BAF28 /* ReleasesNavigationController.swift */,
 				09375EBB2875F5FA003BAF28 /* ReleasesViewController.swift */,
+				0935C37D2876360C00556715 /* ReleaseViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -202,6 +205,7 @@
 				09375EBC2875F5FA003BAF28 /* ReleasesViewController.swift in Sources */,
 				0909CDD028752D170040714B /* User.swift in Sources */,
 				09375EBA2875F523003BAF28 /* ReleasesNavigationController.swift in Sources */,
+				0935C37E2876360C00556715 /* ReleaseViewController.swift in Sources */,
 				094AFA38287161EE0093F31A /* AppDelegate.swift in Sources */,
 				0909CDC928751CE90040714B /* TabBarController.swift in Sources */,
 				094AFA3A287161EE0093F31A /* SceneDelegate.swift in Sources */,
