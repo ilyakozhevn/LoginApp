@@ -32,6 +32,10 @@ class LoginViewController: UIViewController {
             if let logoutViewController = viewController as? LogoutViewController {
                 logoutViewController.userName = self.userNameTF.text ?? ""
             }
+//            else if let releasesNaviC = navigationController as? ReleasesNavigationController {
+//                guard let releasesViewC = releasesNaviC.topViewController as? ReleasesViewController else { return }
+//                releasesViewC.view.backgroundColor = .lightGray
+//            }
         }
     }
     
