@@ -12,9 +12,7 @@ class LoginViewController: UIViewController {
     @IBOutlet var userNameTF: UITextField!
     @IBOutlet var passwordTF: UITextField!
     
-    private let passwords = [
-        "ilyakozhevn": "lalala"
-    ]
+    private let user = User.getUser()
     
     //    MARK: keyboard hide
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -30,12 +28,16 @@ class LoginViewController: UIViewController {
         
         for viewController in viewControllers {
             if let logoutViewController = viewController as? LogoutViewController {
-                logoutViewController.userName = self.userNameTF.text ?? ""
+                logoutViewController.userName = user.info.name
+            } else if let introViewController = viewController as? IntroViewController {
+                introViewController.introText = user.info.name + " is an " + user.info.about + "\n\nReferences: " + user.info.references.joined(separator: ", ")
+            } else if let releasesNaviC = viewController as? ReleasesNavigationController {
+                guard let releasesViewC = releasesNaviC.topViewController as? ReleasesViewController else { return }
+                releasesViewC.releaseTitles = []
+                for release in user.releases {
+                    releasesViewC.releaseTitles.append(release.albumName)
+                }
             }
-//            else if let releasesNaviC = navigationController as? ReleasesNavigationController {
-//                guard let releasesViewC = releasesNaviC.topViewController as? ReleasesViewController else { return }
-//                releasesViewC.view.backgroundColor = .lightGray
-//            }
         }
     }
     
@@ -54,9 +56,9 @@ class LoginViewController: UIViewController {
     @IBAction func forgotUserTouched() {
         showAlert(
             title: "I can help you",
-            message: "Enter '\(passwords.keys.first ?? "")' as User Name",
+            message: "Enter '\(user.login)' as User Name",
             handler: {_ in
-                self.userNameTF.text = self.passwords.keys.first
+                self.userNameTF.text = self.user.login
             }
         )
     }
@@ -64,9 +66,9 @@ class LoginViewController: UIViewController {
     @IBAction func forgotPasswordTouched() {
         showAlert(
             title: "I can help you",
-            message: "Enter '\(passwords[passwords.keys.first!] ?? "")' for Password",
+            message: "Enter '\(user.password)' for Password",
             handler: {_ in
-                self.passwordTF.text = self.passwords[self.passwords.keys.first!]
+                self.passwordTF.text = self.user.password
             }
         )
     }
@@ -88,7 +90,7 @@ class LoginViewController: UIViewController {
     
     //    MARK: check login
     private func checkLoginAnsPassword() -> Bool {
-        if let userName = userNameTF.text, passwordTF.text == passwords[userName] {
+        if userNameTF.text == user.login && passwordTF.text == user.password {
             return true
         } else {
             showAlert(

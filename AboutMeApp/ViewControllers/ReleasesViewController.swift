@@ -7,23 +7,36 @@
 
 import UIKit
 
-class ReleasesViewController: UINavigationController {
+class ReleasesViewController: UIViewController {
 
+    @IBOutlet var albumButtons: [UIButton]!
+
+    var releaseTitles = [""]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        setTitlesForButtons()
+        hideExtraButtons()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    private func setTitlesForButtons() {
+        for (index, title) in releaseTitles.enumerated() {
+            if index < albumButtons.count {
+                albumButtons[index].setTitle(title, for: .normal)
+            }
+        }
     }
-    */
+    
+    private func hideExtraButtons() {
+        if albumButtons.count > releaseTitles.count {
+            for albumIndex in releaseTitles.count..<albumButtons.count {
+                albumButtons[albumIndex].isHidden = true
+            }
+        }
+    }
+    
+//    guard let url = URL(string: "https://stackoverflow.com") else { return }
+//    UIApplication.shared.open(url)
 
 }
