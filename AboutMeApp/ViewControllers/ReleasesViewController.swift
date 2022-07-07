@@ -11,7 +11,7 @@ class ReleasesViewController: UIViewController {
 
     @IBOutlet var albumButtons: [UIButton]!
     
-    var releases = [Release(albumName: "", link: "", labelName: .Elliahh, tracks: [""], image: UIImage.init(systemName: "stop")!)]
+    var releases = [Release(albumName: "", link: "", labelName: .Elliahh, tracks: [""], image: "stop")]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,7 +31,7 @@ class ReleasesViewController: UIViewController {
         releaseVC.link = release.link
         releaseVC.title = release.albumName
         releaseVC.tracklist = release.tracks
-        releaseVC.artwork = release.image
+        releaseVC.artwork = UIImage.init(named: release.image) ?? UIImage.init(systemName: "stop")!
     }
     
     @IBAction func releaseButtonTouched(_ sender: UIButton) {

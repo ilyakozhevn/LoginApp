@@ -39,7 +39,7 @@ class LoginViewController: UIViewController {
                                                 "\n\nReferences: " +
                                                 user.info.references.joined(separator: ", ")
                 
-                introViewController.avatar = user.info.avatar
+                introViewController.avatar = UIImage.init(named: user.info.avatar) ?? UIImage.init(systemName: "stop")!
                 
             } else if let releasesNaviC = viewController as? UINavigationController {
                 guard let releasesViewC = releasesNaviC.topViewController as? ReleasesViewController else { return }
