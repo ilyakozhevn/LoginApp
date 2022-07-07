@@ -22,7 +22,7 @@ class LoginViewController: UIViewController {
     
     //    MARK: segue
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let tabBarVC = segue.destination as? TabBarController else { return }
+        guard let tabBarVC = segue.destination as? UITabBarController else { return }
         
         guard let viewControllers = tabBarVC.viewControllers else { return }
         
@@ -39,7 +39,7 @@ class LoginViewController: UIViewController {
                 
                 introViewController.avatar = user.info.avatar
                 
-            } else if let releasesNaviC = viewController as? ReleasesNavigationController {
+            } else if let releasesNaviC = viewController as? UINavigationController {
                 guard let releasesViewC = releasesNaviC.topViewController as? ReleasesViewController else { return }
                 releasesViewC.releases = []
                 for release in user.releases {

@@ -11,7 +11,7 @@ class ReleasesViewController: UIViewController {
 
     @IBOutlet var albumButtons: [UIButton]!
     
-    var releases = [Release(albumName: "", link: "", albumType: .Single, tracks: [""], image: UIImage.init(systemName: "stop")!)]
+    var releases = [Release(albumName: "", link: "", labelName: .Elliahh, tracks: [""], image: UIImage.init(systemName: "stop")!)]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,6 +27,7 @@ class ReleasesViewController: UIViewController {
         let index = Int(button.accessibilityLabel ?? "0") ?? 0
         let release = releases[index]
         
+        releaseVC.labelName = release.labelName.rawValue
         releaseVC.link = release.link
         releaseVC.title = release.albumName
         releaseVC.tracklist = release.tracks

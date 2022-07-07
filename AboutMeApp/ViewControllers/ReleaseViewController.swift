@@ -12,15 +12,18 @@ class ReleaseViewController: UIViewController {
     @IBOutlet var artworkImageView: UIImageView!
     @IBOutlet var tracksLabel: UILabel!
     @IBOutlet var linkButton: UIButton!
+    @IBOutlet var labelNameLabel: UILabel!
     
     var releaseTitle: String = ""
     var link: String = ""
     var tracklist: [String] = []
     var artwork = UIImage.init(systemName: "stop")!
+    var labelName = ""
 
     override func viewDidLoad() {
         super.viewDidLoad()
         artworkImageView.image = artwork
+        labelNameLabel.text = "Label: " + labelName
         topNavigationItem.title = releaseTitle
         
         if tracklist.count == 1 {

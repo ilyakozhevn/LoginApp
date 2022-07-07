@@ -15,6 +15,6 @@ class LogoutViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        byeMessageLabel.text = "Have a nice day, and listen to \(userName)!"
+        byeMessageLabel.text = "Have a nice day, and listen to \(userName) :)"
     }
 }

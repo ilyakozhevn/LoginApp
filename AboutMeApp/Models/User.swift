@@ -32,42 +32,42 @@ struct User {
                 Release(
                     albumName: "Hello World",
                     link: "https://soundcloud.com/elliahh/hello-world",
-                    albumType: .Single,
+                    labelName: .Elliahh,
                     tracks: ["Hello World"],
                     image: UIImage.init(named: "helloWorld") ?? UIImage.init(systemName: "stop")!
                 ),
                 Release(
                     albumName: "Memories",
                     link: "https://ilya.bandcamp.com/track/memories-extended-mix",
-                    albumType: .Single,
+                    labelName: .Elliahh,
                     tracks: ["Memories"],
                     image: UIImage.init(named: "memories") ?? UIImage.init(systemName: "stop")!
                 ),
                 Release(
                     albumName: "Primitive",
                     link: "https://www.beatport.com/release/primitive/3626152",
-                    albumType: .Single,
+                    labelName: .Suprematic,
                     tracks: ["Primitive"],
                     image: UIImage.init(named: "primitive") ?? UIImage.init(systemName: "stop")!
                 ),
                 Release(
                     albumName: "The End Of Time",
                     link: "https://insectorama.bandcamp.com/album/the-end-of-time",
-                    albumType: .EP,
+                    labelName: .Insectorama,
                     tracks: ["Hello World", "Clouds", "The End Of Time", "Miracle"],
                     image: UIImage.init(named: "theEndOfTime") ?? UIImage.init(systemName: "stop")!
                 ),
                 Release(
                     albumName: "Rest State",
                     link: "https://www.beatport.com/release/rest-state/3659521",
-                    albumType: .Single,
+                    labelName: .Suprematic,
                     tracks: ["Rest State (Extended Mix)"],
                     image: UIImage.init(named: "restState") ?? UIImage.init(systemName: "stop")!
                 ),
                 Release(
                     albumName: "Try",
                     link: "https://www.beatport.com/release/try/3722356",
-                    albumType: .Single,
+                    labelName: .Suprematic,
                     tracks: ["Try (Extended Mix)"],
                     image: UIImage.init(named: "try") ?? UIImage.init(systemName: "stop")!
                 )
@@ -86,12 +86,13 @@ struct Info {
 struct Release {
     var albumName: String
     var link: String
-    var albumType: AlbumType
+    var labelName: Labels
     var tracks: [String]
     var image: UIImage
 }
 
-enum AlbumType {
-    case Single
-    case EP
+enum Labels: String {
+    case Elliahh
+    case Suprematic
+    case Insectorama
 }
