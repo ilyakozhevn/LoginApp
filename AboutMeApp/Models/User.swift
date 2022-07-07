@@ -8,18 +8,25 @@
 import Foundation
 import UIKit
 
+struct Login {
+    var login = ""
+    var password = ""
+    
+    static func getDefaultLogin() -> Login {
+        Login(login: "ilyakozhevn", password: "lalala")
+    }
+}
+
 struct User {
     let login: String
-    var password: String
     
     var info: Info
     
     var releases: [Release]
     
-    static func getUser() -> User {
+    static func getUser(login: String) -> User {
         User(
-            login: "ilyakozhevn",
-            password: "lalala",
+            login: login,
             info:
                 Info(
                     name: "Ilya Kozhevnikov",

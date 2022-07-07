@@ -12,7 +12,7 @@ class LoginViewController: UIViewController {
     @IBOutlet var userNameTF: UITextField!
     @IBOutlet var passwordTF: UITextField!
     
-    private let user = User.getUser()
+    private let login = Login.getDefaultLogin()
     
     //    MARK: keyboard hide
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -26,6 +26,8 @@ class LoginViewController: UIViewController {
         
         guard let viewControllers = tabBarVC.viewControllers else { return }
         
+        let user = User.getUser(login: login.login)
+
         for viewController in viewControllers {
             if let logoutViewController = viewController as? LogoutViewController {
                 logoutViewController.userName = user.info.name
@@ -64,9 +66,9 @@ class LoginViewController: UIViewController {
     @IBAction func forgotUserTouched() {
         showAlert(
             title: "I can help you",
-            message: "Enter '\(user.login)' as User Name",
+            message: "Enter '\(login.login)' as User Name",
             handler: {_ in
-                self.userNameTF.text = self.user.login
+                self.userNameTF.text = self.login.login
             }
         )
     }
@@ -74,9 +76,9 @@ class LoginViewController: UIViewController {
     @IBAction func forgotPasswordTouched() {
         showAlert(
             title: "I can help you",
-            message: "Enter '\(user.password)' for Password",
+            message: "Enter '\(login.password)' for Password",
             handler: {_ in
-                self.passwordTF.text = self.user.password
+                self.passwordTF.text = self.login.password
             }
         )
     }
@@ -98,7 +100,7 @@ class LoginViewController: UIViewController {
     
     //    MARK: check login
     private func checkLoginAnsPassword() -> Bool {
-        if userNameTF.text == user.login && passwordTF.text == user.password {
+        if userNameTF.text == login.login && passwordTF.text == login.password {
             return true
         } else {
             showAlert(
