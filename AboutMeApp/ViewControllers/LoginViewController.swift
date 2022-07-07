@@ -26,7 +26,7 @@ class LoginViewController: UIViewController {
         
         guard let viewControllers = tabBarVC.viewControllers else { return }
         
-        let user = User.getUser(login: login.login)
+        let user = User.createUser(login: login.login)
 
         for viewController in viewControllers {
             if let logoutViewController = viewController as? LogoutViewController {

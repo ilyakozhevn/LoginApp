@@ -23,7 +23,7 @@ struct User {
     
     var releases: [Release]
     
-    static func getUser(login: String) -> User {
+    static func createUser(login: String) -> User {
         User(
             login: login,
             info:
