@@ -9,8 +9,8 @@ import Foundation
 import UIKit
 
 struct Login {
-    var login = ""
-    var password = ""
+    var login: String
+    var password: String
     
     static func getDefaultLogin() -> Login {
         Login(login: "ilyakozhevn", password: "lalala")
